@@ -8,4 +8,4 @@ namespace: hello-gitops
 images:
 - name: hello-gitops
   newName: kannappansenthilnathan/hello-gitops
-  newTag: e4bcaafabb8ad7c8d98f92e2353e1e5f40e1e181
+  newTag: 439a9e1f7a40ad8df5985412ae8261349ca5962d
