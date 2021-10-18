@@ -47,7 +47,7 @@ jobs:
     - name: Set app1 image tag
       uses: mikefarah/yq@master
       with:
-        cmd: yq e -i '.image.tag= "$GITHUB_SHA"' app1-values.yaml
+        cmd: yq e -i '.image.tag= "$GITHUB_SHA"' ./helm/templates/app1-values.yaml
 
     - name: Commit files
       run: |
