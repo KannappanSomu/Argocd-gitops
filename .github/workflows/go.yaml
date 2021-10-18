@@ -44,10 +44,10 @@ jobs:
       with:
         kustomize-version: "3.6.1"
 
-    - name: Set app1 image tag
+    - name: deploy dev app
       uses: mikefarah/yq@master
       with:
-        cmd: yq e -i '.image.tag= "$GITHUB_SHA"' ./helm/templates/app1-values.yaml
+        cmd: yq e -i '.image.tag= "$GITHUB_SHA"' ./helm/app1-values.yaml
 
     - name: Commit files
       run: |
