@@ -4,7 +4,7 @@
 replicaCount: 2
 image:
   repository: kannappansenthilnathan/hello-gitops
-  tag: $GITHUB_SHA
+  tag: edb36f8214c6233ebf9048ce22c7e502dedaca4e
   pullPolicy: Always
 imagePullSecret: docker
 nameOverride: "hello1"
