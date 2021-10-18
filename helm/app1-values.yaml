@@ -11,7 +11,7 @@ image:
 
 imagePullSecret: docker
 nameOverride: "hello1"
-fullnameOverride: "hello2"
+fullnameOverride: "hello1"
 
 serviceAccount:
   # Specifies whether a service account should be created
