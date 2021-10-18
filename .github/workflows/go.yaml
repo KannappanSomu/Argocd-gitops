@@ -47,7 +47,7 @@ jobs:
     - name: deploy dev app
       uses: mikefarah/yq@master
       with:
-        cmd: yq e -i '.image.tag= "$GITHUB_SHA"' ./helm/app1-values.yaml
+        cmd: yq e -i '.image.tag= ${{ github.sha }}' ./helm/app1-values.yaml
 
     - name: Commit files
       run: |
