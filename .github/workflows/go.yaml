@@ -44,14 +44,11 @@ jobs:
       with:
         kustomize-version: "3.6.1"
 
-    - name: Update Kubernetes resources
-      env:
-        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-      run: |
-       cd kustomize/base
-       kustomize edit set image hello-gitops=$DOCKER_USERNAME/hello-gitops:$GITHUB_SHA
-       cat kustomization.yaml
-        
+    - name: Set app1 image tag
+      uses: mikefarah/yq@master
+      with:
+        cmd: yq e -i '.image.tag= "$GITHUB_SHA"' app1-values.yaml
+
     - name: Commit files
       run: |
         git config --local user.email "action@github.com"
