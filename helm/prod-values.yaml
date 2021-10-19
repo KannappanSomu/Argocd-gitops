@@ -1,46 +1,40 @@
 # Default values for helm.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
-
 replicaCount: 2
-
 image:
   repository: kannappansenthilnathan/hello-gitops
-  tag: latest
+  tag: c63a356694739241df53e3405926ff6206da1d28
   pullPolicy: Always
-
 imagePullSecret: docker
 nameOverride: "helloprod"
 fullnameOverride: "helloprod"
-
 serviceAccount:
   # Specifies whether a service account should be created
   create: false
   # The name of the service account to use.
   # If not set and create is true, a name is generated using the fullname template
   name:
-
 podSecurityContext: {}
-  # fsGroup: 2000
+# fsGroup: 2000
 
 securityContext: {}
-  # capabilities:
-  #   drop:
-  #   - ALL
-  # readOnlyRootFilesystem: true
-  # runAsNonRoot: true
-  # runAsUser: 1000
+# capabilities:
+#   drop:
+#   - ALL
+# readOnlyRootFilesystem: true
+# runAsNonRoot: true
+# runAsUser: 1000
 
 service:
   type: ClusterIP
   port: 8080
   targetport: 8080
   #nodeport: 30030
-
 ingress:
   enabled: true
   paths: /
-  hosts: 
+  hosts:
     - helloprod.com
   annotations:
     kubernetes.io/ingress.class: traefik
@@ -48,12 +42,11 @@ ingress:
     # ingress.kubernetes.io/upstream-max-fails: 2
     # ingress.kubernetes.io/proxy-read-timeout: 3600
     # ingress.kubernetes.io/proxy-send-timeout: 3600
-
 resources: {}
-  # We usually recommend not to specify default resources and to leave this as a conscious
-  # choice for the user. This also increases chances charts run on environments with little
-  # resources, such as Minikube. If you do want to specify resources, uncomment the following
-  # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+# We usually recommend not to specify default resources and to leave this as a conscious
+# choice for the user. This also increases chances charts run on environments with little
+# resources, such as Minikube. If you do want to specify resources, uncomment the following
+# lines, adjust them as necessary, and remove the curly braces after 'resources:'.
 #   limits:
 #     cpu: 100m
 #     memory: 128Mi
@@ -64,9 +57,6 @@ resources: {}
 env:
   server:
     port: 8080
-
 nodeSelector: {}
-
 tolerations: []
-
 affinity: {}
