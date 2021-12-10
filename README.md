@@ -1,6 +1,6 @@
 # Workshop Hello GitOps
 
-Example project to demonstrate GitOps using [Kustomize](https://github.com/kubernetes-sigs/kustomize), GitHub Actions and [ArgoCD](https://github.com/argoproj/argo-cd/)
+Example projects to demonstrate GitOps using [Kustomize](https://github.com/kubernetes-sigs/kustomize), GitHub Actions and [ArgoCD](https://github.com/argoproj/argo-cd/)
 
 - [What we want to achieve](#what-we-want-to-achieve)
 - [Setup Minikube](#setup-minikube)
