@@ -4,7 +4,7 @@
 replicaCount: 2
 image:
   repository: kannappansenthilnathan/hello-gitops
-  tag: c1e68bac320eb8f04f62d0ca6936f4282c522c8c
+  tag: 4088ec3597705e6ceca03562e4420a3a00697419
   pullPolicy: Always
 imagePullSecret: docker
 nameOverride: "hellodev"
