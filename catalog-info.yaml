@@ -1,0 +1,26 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  annotations:
+    github.com/project-slug: volvo-cars/sentry-saas
+    sentry.io/project-slug: 007-demo-project
+    backstage.io/techdocs-ref: dir:.
+  name: sentry-saas
+  description: Sentry Saas Service.
+  tags:
+    - crash-monitoring
+    - logging
+    - apm
+  links:
+    - url: https://sentry.io/auth/login/
+      title: My Sentry Dashboard
+      icon: dashboard    
+    - url: https://docs.sentry.io/
+      title: Documentation
+      icon: documentation
+    
+spec:
+  type: service
+  lifecycle: production
+  owner: 'dark-lords'
+  system: Sentry
